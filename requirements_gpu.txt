@@ -13,9 +13,9 @@ tqdm>=4.62.0
 
 # 深度学习框架 (GPU版本)
 # 注意：请根据您的CUDA版本选择合适的torch版本
-# CUDA 11.1
-torch>=1.9.0+cu111
-torchvision>=0.10.0+cu111
+# CUDA 12.1
+torch>=2.0.0+cu121
+torchvision>=0.15.0+cu121
 --find-links https://download.pytorch.org/whl/torch_stable.html
 
 # 或者使用以下版本（根据您的CUDA版本选择）：
@@ -42,4 +42,4 @@ gensim>=4.1.0
 # 可选：其他有用的包
 # matplotlib>=3.3.0  # 用于可视化
 # seaborn>=0.11.0    # 用于统计图表
-# jupyter>=1.0.0     # 用于交互式开发 
+# jupyter>=1.0.0     # 用于交互式开发
