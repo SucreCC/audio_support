@@ -47,33 +47,32 @@ def main():
         print("错误：找不到core目录，请确保在正确的项目根目录下运行")
         sys.exit(1)
     
-    # 切换到core目录
-    os.chdir('core')
+    # os.chdir('core')  # 删除切换目录
     
     if args.test:
         print("运行快速测试...")
-        subprocess.run([sys.executable, 'quick_test.py'])
+        subprocess.run([sys.executable, 'core/quick_test.py'])
     elif args.ensemble_only:
         print("只运行模型集成...")
-        subprocess.run([sys.executable, 'run_all_models.py', '--ensemble-only'])
+        subprocess.run([sys.executable, 'core/run_all_models.py', '--ensemble-only'])
     elif args.model == 'all':
         if args.skip:
             skip_args = ['--skip'] + args.skip
-            subprocess.run([sys.executable, 'run_all_models.py'] + skip_args)
+            subprocess.run([sys.executable, 'core/run_all_models.py'] + skip_args)
         else:
-            subprocess.run([sys.executable, 'run_all_models.py'])
+            subprocess.run([sys.executable, 'core/run_all_models.py'])
     else:
         # 运行单个模型
         model_scripts = {
-            'tfidf_lr': 'train/tfidf_lr_train.py',
-            'bert': 'train/bert_train.py',
-            'lstm': 'train/lstm_train.py'
+            'tfidf_lr': 'tfidf_lr_train',
+            'bert': 'bert_train',
+            'lstm': 'lstm_train'
         }
         
         if args.model in model_scripts:
-            script = model_scripts[args.model]
+            module_name = f"core.train.{model_scripts[args.model]}"
             print(f"运行 {args.model} 模型训练...")
-            subprocess.run([sys.executable, script])
+            subprocess.run([sys.executable, '-m', module_name])
         else:
             print(f"不支持的模型: {args.model}")
 

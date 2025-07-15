@@ -1,8 +1,8 @@
 # 数据配置
 data:
   # 数据文件路径
-  train_file: "../../data/round1/gaiic_track3_round1_train_20210228.tsv"
-  test_file: "../../data/round1/gaiic_track3_round1_testA_20210228.tsv"
+  train_file: "data/round1/gaiic_track3_round1_train_20210228.tsv"
+  test_file: "data/round1/gaiic_track3_round1_testA_20210228.tsv"
   
   # 数据列名
   columns:

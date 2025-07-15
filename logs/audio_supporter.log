@@ -87,3 +87,42 @@
 2025-07-15 11:42:37,778 - audio_supporter - INFO - Word2Vec模型已保存到 ../../results/word2vec_model.model
 2025-07-15 11:42:37,799 - audio_supporter - INFO - LSTM Fold 1
 2025-07-15 11:43:36,351 - audio_supporter - INFO - LSTM Epoch 1, Loss: 0.5515, Val AUC: 0.8197
+2025-07-15 15:12:55,637 - audio_supporter - INFO - ==================================================
+2025-07-15 15:12:55,637 - audio_supporter - INFO - 训练 TF-IDF + LR 模型
+2025-07-15 15:12:55,637 - audio_supporter - INFO - ==================================================
+2025-07-15 15:12:55,638 - audio_supporter - INFO - 加载数据...
+2025-07-15 15:16:07,233 - audio_supporter - INFO - ==================================================
+2025-07-15 15:16:07,233 - audio_supporter - INFO - 训练 BERT 微调模型
+2025-07-15 15:16:07,233 - audio_supporter - INFO - ==================================================
+2025-07-15 15:16:07,233 - audio_supporter - INFO - 加载数据...
+2025-07-15 15:16:07,350 - audio_supporter - INFO - 训练集大小: 100000
+2025-07-15 15:16:07,350 - audio_supporter - INFO - 测试集大小: 25000
+2025-07-15 15:16:08,901 - audio_supporter - INFO - 使用中文BERT模型
+2025-07-15 15:16:08,928 - audio_supporter - INFO - BERT Fold 1
+2025-07-15 15:16:14,748 - audio_supporter - INFO - ==================================================
+2025-07-15 15:16:14,748 - audio_supporter - INFO - 训练 TF-IDF + LR 模型
+2025-07-15 15:16:14,748 - audio_supporter - INFO - ==================================================
+2025-07-15 15:16:14,748 - audio_supporter - INFO - 加载数据...
+2025-07-15 15:16:14,849 - audio_supporter - INFO - 训练集大小: 100000
+2025-07-15 15:16:14,849 - audio_supporter - INFO - 测试集大小: 25000
+2025-07-15 15:16:14,849 - audio_supporter - INFO - 提取TF-IDF特征...
+2025-07-15 15:16:21,941 - audio_supporter - INFO - SVD降维...
+2025-07-15 15:16:39,435 - audio_supporter - INFO - ==================================================
+2025-07-15 15:16:39,435 - audio_supporter - INFO - 训练 Word2Vec + LSTM 模型
+2025-07-15 15:16:39,435 - audio_supporter - INFO - ==================================================
+2025-07-15 15:16:39,435 - audio_supporter - INFO - 加载数据...
+2025-07-15 15:16:39,544 - audio_supporter - INFO - 训练集大小: 100000
+2025-07-15 15:16:39,544 - audio_supporter - INFO - 测试集大小: 25000
+2025-07-15 15:16:39,544 - audio_supporter - INFO - 进行中文分词...
+2025-07-15 15:17:16,383 - audio_supporter - INFO - ==================================================
+2025-07-15 15:17:16,383 - audio_supporter - INFO - 训练 TF-IDF + LR 模型
+2025-07-15 15:17:16,383 - audio_supporter - INFO - ==================================================
+2025-07-15 15:17:16,383 - audio_supporter - INFO - 加载数据...
+2025-07-15 15:20:15,733 - audio_supporter - INFO - ==================================================
+2025-07-15 15:20:15,734 - audio_supporter - INFO - 训练 TF-IDF + LR 模型
+2025-07-15 15:20:15,734 - audio_supporter - INFO - ==================================================
+2025-07-15 15:20:15,734 - audio_supporter - INFO - 加载数据...
+2025-07-15 15:20:15,844 - audio_supporter - INFO - 训练集大小: 100000
+2025-07-15 15:20:15,844 - audio_supporter - INFO - 测试集大小: 25000
+2025-07-15 15:20:15,844 - audio_supporter - INFO - 提取TF-IDF特征...
+2025-07-15 15:20:23,100 - audio_supporter - INFO - SVD降维...
