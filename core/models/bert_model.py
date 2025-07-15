@@ -9,8 +9,8 @@ from sklearn.model_selection import StratifiedKFold
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-from transformers import BertTokenizer, BertModel, AdamW
-
+from transformers import BertTokenizer, BertModel
+from torch.optim import AdamW
 from core.dependencies.globals import configer, logger
 
 # 设置设备
@@ -93,6 +93,9 @@ class BertModelWrapper:
         df = pd.concat([df_train, df_test], ignore_index=True)
         df['text'] = df[data_config.columns['q1']] + data_config.text_separator + df[data_config.columns['q2']]
         
+        df_train['text'] = df_train[data_config.columns['q1']] + data_config.text_separator + df_train[data_config.columns['q2']]
+        df_test['text'] = df_test[data_config.columns['q1']] + data_config.text_separator + df_test[data_config.columns['q2']]
+
         logger.info(f"训练集大小: {len(df_train)}")
         logger.info(f"测试集大小: {len(df_test)}")
         

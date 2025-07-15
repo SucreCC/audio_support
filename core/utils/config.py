@@ -146,6 +146,12 @@ class ModelConfig:
             with open(yaml_path, 'r', encoding='utf-8') as f:
                 config_dict = yaml.safe_load(f)
 
+            # 确保学习率是浮点数类型
+            if 'bert' in config_dict and 'learning_rate' in config_dict['bert']:
+                config_dict['bert']['learning_rate'] = float(config_dict['bert']['learning_rate'])
+            if 'lstm' in config_dict and 'learning_rate' in config_dict['lstm']:
+                config_dict['lstm']['learning_rate'] = float(config_dict['lstm']['learning_rate'])
+
             # 创建各个配置对象
             data_cfg = DataConfig(**config_dict['data'])
             training_cfg = TrainingConfig(**config_dict['training'])
@@ -216,10 +222,10 @@ class ModelConfig:
 # 全局配置实例
 _config = None
 
-def get_config(config_path: str = None) -> ModelConfig:
+def get_config(config_path: str = None, force_reload: bool = False) -> ModelConfig:
     """获取全局配置实例"""
     global _config
-    if _config is None:
+    if _config is None or force_reload:
         if config_path is None:
             # 默认配置文件路径
             current_dir = os.path.dirname(os.path.abspath(__file__))
