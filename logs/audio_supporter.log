@@ -86,3 +86,4 @@
 2025-07-15 11:42:27,358 - audio_supporter - INFO - 训练Word2Vec模型...
 2025-07-15 11:42:37,778 - audio_supporter - INFO - Word2Vec模型已保存到 ../../results/word2vec_model.model
 2025-07-15 11:42:37,799 - audio_supporter - INFO - LSTM Fold 1
+2025-07-15 11:43:36,351 - audio_supporter - INFO - LSTM Epoch 1, Loss: 0.5515, Val AUC: 0.8197
