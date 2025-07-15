@@ -218,8 +218,13 @@ class LstmModelWrapper:
         # 加载数据
         df_train, df_test, label, df = self.load_data()
         
-        # 分词处理
+        # 分词处理 - 对合并后的数据进行分词
         df = self.tokenize_data(df)
+        
+        # 从合并后的数据中分离出训练集和测试集的分词结果
+        train_size = len(df_train)
+        df_train_tokens = df.iloc[:train_size]
+        df_test_tokens = df.iloc[train_size:]
         
         # 训练Word2Vec模型
         sentences = df['tokens'].values
@@ -232,10 +237,10 @@ class LstmModelWrapper:
         for i, (train_index, valid_index) in enumerate(tqdm(kf.split(df_train, label), total=nfold, desc="LSTM训练")):
             logger.info(f"LSTM Fold {i + 1}")
             
-            # 准备数据
-            train_tokens = df_train.iloc[train_index]['tokens'].values
-            val_tokens = df_train.iloc[valid_index]['tokens'].values
-            test_tokens = df_test['tokens'].values
+            # 准备数据 - 使用分词后的数据
+            train_tokens = df_train_tokens.iloc[train_index]['tokens'].values
+            val_tokens = df_train_tokens.iloc[valid_index]['tokens'].values
+            test_tokens = df_test_tokens['tokens'].values
             
             train_labels = label[train_index]
             val_labels = label[valid_index]

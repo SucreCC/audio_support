@@ -66,3 +66,23 @@
 2025-07-15 11:40:09,994 - audio_supporter - INFO - 测试集大小: 25000
 2025-07-15 11:40:11,815 - audio_supporter - INFO - 使用中文BERT模型
 2025-07-15 11:40:11,844 - audio_supporter - INFO - BERT Fold 1
+2025-07-15 11:41:16,033 - audio_supporter - INFO - ==================================================
+2025-07-15 11:41:16,033 - audio_supporter - INFO - 训练 Word2Vec + LSTM 模型
+2025-07-15 11:41:16,033 - audio_supporter - INFO - ==================================================
+2025-07-15 11:41:16,034 - audio_supporter - INFO - 加载数据...
+2025-07-15 11:41:16,145 - audio_supporter - INFO - 训练集大小: 100000
+2025-07-15 11:41:16,145 - audio_supporter - INFO - 测试集大小: 25000
+2025-07-15 11:41:16,145 - audio_supporter - INFO - 进行中文分词...
+2025-07-15 11:41:23,240 - audio_supporter - INFO - 训练Word2Vec模型...
+2025-07-15 11:41:33,727 - audio_supporter - INFO - Word2Vec模型已保存到 ../../results/word2vec_model.model
+2025-07-15 11:41:33,748 - audio_supporter - INFO - LSTM Fold 1
+2025-07-15 11:42:20,136 - audio_supporter - INFO - ==================================================
+2025-07-15 11:42:20,136 - audio_supporter - INFO - 训练 Word2Vec + LSTM 模型
+2025-07-15 11:42:20,136 - audio_supporter - INFO - ==================================================
+2025-07-15 11:42:20,136 - audio_supporter - INFO - 加载数据...
+2025-07-15 11:42:20,244 - audio_supporter - INFO - 训练集大小: 100000
+2025-07-15 11:42:20,245 - audio_supporter - INFO - 测试集大小: 25000
+2025-07-15 11:42:20,245 - audio_supporter - INFO - 进行中文分词...
+2025-07-15 11:42:27,358 - audio_supporter - INFO - 训练Word2Vec模型...
+2025-07-15 11:42:37,778 - audio_supporter - INFO - Word2Vec模型已保存到 ../../results/word2vec_model.model
+2025-07-15 11:42:37,799 - audio_supporter - INFO - LSTM Fold 1
