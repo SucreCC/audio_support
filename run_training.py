@@ -65,9 +65,9 @@ def main():
     else:
         # 运行单个模型
         model_scripts = {
-            'tfidf_lr': 'tfidf_lr_train.py',
-            'bert': 'bert_train.py',
-            'lstm': 'lstm_train.py'
+            'tfidf_lr': 'train/tfidf_lr_train.py',
+            'bert': 'train/bert_train.py',
+            'lstm': 'train/lstm_train.py'
         }
         
         if args.model in model_scripts:
