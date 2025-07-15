@@ -37,7 +37,7 @@ tfidf_lr:
 # BERT 模型配置
 bert:
   # 模型参数
-  model_name: "bert-base-chinese"
+  model_name: "./bert-base-chinese"
   max_len: 128
   
   # 训练参数

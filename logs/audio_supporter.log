@@ -126,3 +126,33 @@
 2025-07-15 15:20:15,844 - audio_supporter - INFO - 测试集大小: 25000
 2025-07-15 15:20:15,844 - audio_supporter - INFO - 提取TF-IDF特征...
 2025-07-15 15:20:23,100 - audio_supporter - INFO - SVD降维...
+2025-07-15 15:40:37,100 - audio_supporter - INFO - ==================================================
+2025-07-15 15:40:37,100 - audio_supporter - INFO - 训练 BERT 微调模型
+2025-07-15 15:40:37,100 - audio_supporter - INFO - ==================================================
+2025-07-15 15:40:37,100 - audio_supporter - INFO - 加载数据...
+2025-07-15 15:40:37,224 - audio_supporter - INFO - 训练集大小: 100000
+2025-07-15 15:40:37,224 - audio_supporter - INFO - 测试集大小: 25000
+2025-07-15 16:35:25,321 - audio_supporter - INFO - ==================================================
+2025-07-15 16:35:25,322 - audio_supporter - INFO - 训练 BERT 微调模型
+2025-07-15 16:35:25,322 - audio_supporter - INFO - ==================================================
+2025-07-15 16:35:25,322 - audio_supporter - INFO - 加载数据...
+2025-07-15 16:35:25,441 - audio_supporter - INFO - 训练集大小: 100000
+2025-07-15 16:35:25,441 - audio_supporter - INFO - 测试集大小: 25000
+2025-07-15 16:35:25,458 - audio_supporter - INFO - 使用中文BERT模型
+2025-07-15 16:35:25,484 - audio_supporter - INFO - BERT Fold 1
+2025-07-15 16:35:43,185 - audio_supporter - INFO - ==================================================
+2025-07-15 16:35:43,185 - audio_supporter - INFO - 训练 BERT 微调模型
+2025-07-15 16:35:43,185 - audio_supporter - INFO - ==================================================
+2025-07-15 16:35:43,185 - audio_supporter - INFO - 加载数据...
+2025-07-15 16:35:43,305 - audio_supporter - INFO - 训练集大小: 100000
+2025-07-15 16:35:43,305 - audio_supporter - INFO - 测试集大小: 25000
+2025-07-15 16:35:43,324 - audio_supporter - INFO - 使用中文BERT模型
+2025-07-15 16:35:43,346 - audio_supporter - INFO - BERT Fold 1
+2025-07-15 16:42:31,821 - audio_supporter - INFO - ==================================================
+2025-07-15 16:42:31,821 - audio_supporter - INFO - 训练 BERT 微调模型
+2025-07-15 16:42:31,821 - audio_supporter - INFO - ==================================================
+2025-07-15 16:42:31,821 - audio_supporter - INFO - 加载数据...
+2025-07-15 16:42:31,943 - audio_supporter - INFO - 训练集大小: 100000
+2025-07-15 16:42:31,943 - audio_supporter - INFO - 测试集大小: 25000
+2025-07-15 16:42:31,962 - audio_supporter - INFO - 使用中文BERT模型
+2025-07-15 16:42:31,984 - audio_supporter - INFO - BERT Fold 1
