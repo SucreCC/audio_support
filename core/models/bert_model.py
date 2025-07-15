@@ -12,7 +12,10 @@ from torch.utils.data import Dataset, DataLoader
 from transformers import BertTokenizer, BertModel
 from torch.optim import AdamW
 from core.dependencies.globals import configer, logger
+import os
 
+# 设置HF镜像
+os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 # 设置设备
 device = configer.system.get_device()
 
