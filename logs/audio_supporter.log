@@ -1,0 +1,20 @@
+2025-07-15 11:23:14,468 - audio_supporter - INFO - ==================================================
+2025-07-15 11:23:14,468 - audio_supporter - INFO - 训练 TF-IDF + LR 模型
+2025-07-15 11:23:14,468 - audio_supporter - INFO - ==================================================
+2025-07-15 11:23:14,468 - audio_supporter - INFO - 加载数据...
+2025-07-15 11:23:14,583 - audio_supporter - INFO - 训练集大小: 100000
+2025-07-15 11:23:14,583 - audio_supporter - INFO - 测试集大小: 25000
+2025-07-15 11:23:14,583 - audio_supporter - INFO - 提取TF-IDF特征...
+2025-07-15 11:23:23,109 - audio_supporter - INFO - SVD降维...
+2025-07-15 11:24:22,572 - audio_supporter - INFO - Fold 1
+2025-07-15 11:24:24,515 - audio_supporter - INFO - 当前fold AUC: 0.7638
+2025-07-15 11:24:24,516 - audio_supporter - INFO - Fold 2
+2025-07-15 11:24:25,312 - audio_supporter - INFO - 当前fold AUC: 0.7642
+2025-07-15 11:24:25,318 - audio_supporter - INFO - Fold 3
+2025-07-15 11:24:26,098 - audio_supporter - INFO - 当前fold AUC: 0.7645
+2025-07-15 11:24:26,101 - audio_supporter - INFO - Fold 4
+2025-07-15 11:24:26,842 - audio_supporter - INFO - 当前fold AUC: 0.7650
+2025-07-15 11:24:26,844 - audio_supporter - INFO - Fold 5
+2025-07-15 11:24:27,593 - audio_supporter - INFO - 当前fold AUC: 0.7679
+2025-07-15 11:24:27,593 - audio_supporter - INFO - TF-IDF + LR 平均 AUC: 0.7651 ± 0.0015
+2025-07-15 11:24:27,647 - audio_supporter - INFO - 结果已保存到 ../../results/tfidf_lr_result.csv
