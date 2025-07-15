@@ -1,0 +1,97 @@
+# 数据配置
+data:
+  # 数据文件路径
+  train_file: "../../data/round1/gaiic_track3_round1_train_20210228.tsv"
+  test_file: "../../data/round1/gaiic_track3_round1_testA_20210228.tsv"
+  
+  # 数据列名
+  columns:
+    q1: "q1"
+    q2: "q2" 
+    label: "label"
+  
+  # 文本处理
+  text_separator: " "
+  fill_na: "0"
+
+# 训练配置
+training:
+  # 交叉验证
+  n_folds: 5
+  random_state: 2020
+  shuffle: true
+  
+  # 结果保存
+  results_dir: "../../results"
+
+# TF-IDF + LR 模型配置
+tfidf_lr:
+  # TF-IDF参数
+  ngram_range: [1, 5]
+  n_components: 100  # SVD降维维度
+  
+  # 逻辑回归参数
+  C: 1.0  # 正则化强度
+  n_jobs: 20  # 并行线程数
+
+# BERT 模型配置
+bert:
+  # 模型参数
+  model_name: "bert-base-chinese"
+  max_len: 128
+  
+  # 训练参数
+  batch_size: 16
+  epochs: 2
+  learning_rate: 2e-5
+  
+  # 模型结构
+  dropout: 0.3
+  num_classes: 2
+
+# Word2Vec + LSTM 模型配置
+lstm:
+  # Word2Vec参数
+  vector_size: 100
+  window: 5
+  min_count: 1
+  workers: 4
+  sg: 1  # Skip-gram
+  
+  # LSTM参数
+  embedding_dim: 100
+  hidden_dim: 128
+  num_layers: 2
+  max_len: 50
+  
+  # 训练参数
+  batch_size: 32
+  epochs: 5
+  learning_rate: 0.001
+  
+  # 模型结构
+  dropout: 0.3
+  bidirectional: true
+  num_classes: 2
+
+# 集成配置
+ensemble:
+  # 集成方法
+  methods:
+    - "simple"      # 简单平均
+    - "weighted"    # 加权平均
+    - "rank"        # 排序集成
+  
+  # 默认权重 (BERT > LSTM > TF-IDF)
+  default_weights:
+    bert: 0.5
+    lstm: 0.3
+    tfidf_lr: 0.2
+
+# 系统配置
+system:
+  # 设备配置
+  device: "auto"  # auto, cpu, cuda
+  
+  # 进度条
+  show_progress: true

@@ -1,0 +1,43 @@
+# 文本相似度模型训练系统依赖包
+# 
+# 请根据您的环境选择合适的安装方式：
+#
+# 1. CPU环境（推荐用于快速测试）:
+#    pip install -r requirements_cpu.txt
+#
+# 2. GPU环境（推荐用于完整训练）:
+#    pip install -r requirements_gpu.txt
+#
+# 3. 通用安装（自动检测环境）:
+#    pip install -r requirements.txt
+#
+# 注意：GPU版本需要先安装CUDA和cuDNN
+
+# 基础数据处理
+pandas>=1.3.0
+numpy>=1.21.0
+
+# 机器学习
+scikit-learn>=1.0.0
+
+# 进度条
+tqdm>=4.62.0
+
+# 深度学习框架（通用版本，自动检测GPU）
+torch>=1.9.0
+torchvision>=0.10.0
+
+# 预训练模型
+transformers>=4.15.0
+tokenizers>=0.10.0
+
+# 中文分词
+jieba>=0.42.1
+
+# 词向量
+gensim>=4.1.0
+
+# 可选：其他有用的包
+# matplotlib>=3.3.0  # 用于可视化
+# seaborn>=0.11.0    # 用于统计图表
+# jupyter>=1.0.0     # 用于交互式开发 
