@@ -11,7 +11,7 @@ import argparse
 def main():
     parser = argparse.ArgumentParser(description='文本相似度模型训练系统')
     parser.add_argument('--model', type=str, choices=['tfidf_lr', 'bert', 'lstm', 'all'], 
-                       default='all', help='选择要训练的模型')
+                       default=None, help='选择要训练的模型')
     parser.add_argument('--skip', type=str, nargs='+', 
                        choices=['tfidf_lr', 'bert', 'lstm'],
                        help='跳过的模型（仅在model=all时有效）')
@@ -20,7 +20,27 @@ def main():
     parser.add_argument('--test', action='store_true',
                        help='运行快速测试')
     
-    args = parser.parse_args()
+    args, unknown = parser.parse_known_args()
+
+    # 如果没有输入任何参数，则进入交互式选择
+    if len(sys.argv) == 1:
+        print("请选择要训练的模型：")
+        print("1. tfidf_lr")
+        print("2. bert")
+        print("3. lstm")
+        print("4. all（全部模型）")
+        choice = input("请输入数字选择（1/2/3/4）：").strip()
+        if choice == '1':
+            args.model = 'tfidf_lr'
+        elif choice == '2':
+            args.model = 'bert'
+        elif choice == '3':
+            args.model = 'lstm'
+        elif choice == '4':
+            args.model = 'all'
+        else:
+            print("无效选择，程序退出。")
+            sys.exit(1)
     
     # 检查core目录是否存在
     if not os.path.exists('core'):
